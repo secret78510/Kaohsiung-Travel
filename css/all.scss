@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ * {
+     font-family: "Microsoft JhengHei" !important;
+     box-sizing: border-box;
+}
+.wrap{
+    width: 960px;
+    margin: 0 auto;
+} 
+header{
+    background-image: url(../images/Hero.png);
+    width: 960px;
+    height: 380px;
+    position: relative;
+    h1{
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    padding-top: 60px;
+    font-weight: bold;
+    }
+    .travel{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        width: 500px;
+        height: 50px;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}
+.menu{
+    box-sizing: border-box;
+    box-shadow: 1px 1px 1px #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0.5px solid #ccc;
+    width: 800px;
+    margin-left: 30px;
+    h2{
+        padding-left: 30px;
+        padding-bottom: 10px;
+    }
+    .btn01{
+        background-color: #8a82cc;
+        border: 1px solid #8a82cc;
+        border-radius: 5px;
+        margin-left: 50px;
+        margin-right: 25px;
+        padding: 10px 35px;
+    }
+    .btn02{
+        background-color: #ffbc9f;
+        border: 1px solid #ffbc9f;
+        border-radius: 5px;
+        padding: 10px 35px;
+        margin-right: 25px;
+    }
+    .btn03{
+        background-color: #f8dc47;
+        border: 1px solid #f8dc47;
+        border-radius: 5px;
+        padding: 10px 35px;
+        margin-right: 25px;
+    }
+    .btn04{
+        background-color: #559ac8;
+        border: 1px solid #559ac8;
+        border-radius: 5px;
+        padding: 10px 35px;
+    }
+}
+.down{
+    margin-top: 30px;
+}
+.titleClass{
+    h2{
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        margin: 20px 40px;
+    }
+    
+}
+    
+
+.listClass{
+
+    li{
+    width: 425px;
+    height: 280px;
+    box-shadow:  1px 3px 5px rgba(0,0,0,0.20);
+    margin: 20px 25px;
+    float: left;
+    .tag{
+        float: right;
+    }   
+    }
+    .picture{
+        width: 425px;
+        height: 150px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        
+        
+        h3{
+            position: absolute;
+            font-size: 22px;
+            color:#fff;
+            left: 0;
+            bottom: 0;
+        }
+        span{
+            position: absolute;
+            color: #fff;
+            right: 0;
+            bottom: 0;
+       
+         }
+    }
+    .content{
+        P{
+            padding: 5px;
+        }
+        span{
+            padding: 5px;
+        }
+    }
+    
+}
+.page{
+    text-align: center;
+   
+    a{
+        color: #559ac8;
+        text-decoration: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+}
+footer{
+    background-color: #559ac8;
+
+    p{
+        text-align: center;
+        padding-top: 20px;
+    }
+    blockquote{
+        color: #fdd367;
+        text-align: center;
+        padding: 15px 0px;
+    }
+}
+
+.clearfix{
+    clear: both;
+}
