@@ -2612,16 +2612,11 @@ travel.addEventListener('change', updateList);
 travel.addEventListener('change', pagination);
 
 //下拉選單
-(function select(){
-    let areaList = [];
-    for (let i = 0; i < data.length; i++) {
-        areaList.push(data[i].Zone);
-    }
+(function select() {
     let area = [];
-    areaList.forEach(function (item) {
-        //如果元素是否在陣列中 沒有就加入
-        if (area.indexOf(item) === -1) {
-            area.push(item);
+    data.forEach(item => {
+        if (area.indexOf(item.Zone) === -1) {
+            area.push(item.Zone);
         }
     })
     for (let i = 0; i < area.length; i++) {
@@ -2633,7 +2628,7 @@ travel.addEventListener('change', pagination);
 
 //區域標題的函式
 function updateTitle(e) {
-    str = '';
+    var str = '';
     for (let i = 0; i < data.length; i++) {
         if (e.target.value == data[i].Zone) {
             str += `<h2>${data[i].Zone}</h2>`
@@ -2641,12 +2636,10 @@ function updateTitle(e) {
         }
     }
     title.innerHTML = str;
-
 }
 //區域內容更新的函式
 function updateList(e) {
-
-    str = '';
+    var str = '';
     for (let i = 0; i < data.length; i++) {
         if (e.target.value == data[i].Zone) {
             str += `<li><div class="picture" style="background-image:url(${data[i].Picture1})">
@@ -2657,9 +2650,9 @@ function updateList(e) {
             <span><img src="images/icons_phone.png" alt="phone">${data[i].Tel}</span>
             <span class="tag"><img src="images/icons_tag.png" alt="tag">${data[i].Ticketinfo}</span>
             </div>
-            </li>`
+            </li>`;
         }
-    } 
+    }
     list.innerHTML = str;
 }
 //用迴圈把所有botton都監聽點擊函式
@@ -2682,15 +2675,20 @@ function pagination() {
         let str = `<span ><a onclick ="changePage(${i})" href="#">${i + 1}</a></span>`
         page.innerHTML += str;
     }
+
     //將所有li加入none 用空陣列push所有元素
     let arr = [];
     for (let i = 0; i < pageNum; i++) {
         list.children[i].style.display = 'none';
         arr.push(list.children[i]);
     }
-    //用push完的陣列切出前5筆加入block
+    //用push完的陣列切出前4筆加入block
     for (let i = 0; i < showPage; i++) {
         arr.slice(0, showPage)[i].style.display = 'block';
+        //如果數量不到要顯示的4頁 當i跑的次數arr的數量一樣就跳出
+        if(arr.length < showPage && i+1 === arr.length){
+            break
+        }
     }
 }
 //切換分頁
@@ -2708,7 +2706,6 @@ function changePage(page) {
     }
     for (let i = 0; i < showPage; i++) {
         arr.slice(start, end)[i].style.display = 'block';
-        console.log(start, end)
     }
 
 }
